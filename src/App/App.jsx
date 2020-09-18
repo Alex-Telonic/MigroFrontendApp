@@ -4,6 +4,11 @@ import {
 } from 'react-router-dom';
 import { connect } from 'react-redux';
 
+import { history, Role } from '@/_helpers';
+import { userModel, userService } from '@/_services';
+
+import { HomePage } from '@/HomePage';
+
 class App extends React.Component {
   constructor(props) {
     super(props);
@@ -11,8 +16,18 @@ class App extends React.Component {
 
   render() {
     return (
-      <Router history={history}>
+      <div>
+        <Router history={history}>
+        <div className="jumbotron">
+            <div className="container">
+              <Switch>
+                <Route path="/" component={HomePage} />
+              </Switch>
+            </div>
+        </div>
       </Router>
+      </div>
+      
     );
   }
 }
