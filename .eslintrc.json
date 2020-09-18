@@ -1,0 +1,25 @@
+{
+  "ecmaFeatures": {
+    "jsx": true,
+    "modules": true
+  },
+  "env": {
+    "browser": true,
+    "node": true
+  },
+  "extends": [
+    "airbnb",
+    "react-app"
+  ],
+  "rules": {
+    "brace-style": [
+      2,
+      "stroustrup"
+    ],
+    "jsx-a11y/href-no-hash": "off",
+    "no-underscore-dangle": "off"
+  },
+  "plugins": [
+    "react"
+  ]
+}

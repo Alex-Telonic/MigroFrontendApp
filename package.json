@@ -6,15 +6,31 @@
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
+    "babel-plugin-emotion": "^10.0.33",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.16.0",
+    "babel-preset-stage-0": "^6.24.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-scripts": "3.4.3"
+    "react-redux": "^7.2.1",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "3.4.3",
+    "redux": "^4.0.5",
+    "webpack-cli": "^3.3.12",
+    "webpack-merge": "^5.1.4"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "dev-build": "webpack --mode production --config ./webpack.config.dev.js",
+    "dev-start": "webpack-dev-server --open google-chrome --config ./webpack.config.dev.js",
+    "prod-build": "webpack --mode production --config ./webpack.config.prod.js",
+    "prod-install": "yes | cp -r carbon.png /var/www/html/ && yes | cp -r sample.py /var/www/html/ && yes | cp -r banner.png /var/www/html/ && cd ./dist && yes | cp -r * /var/www/html/",
+    "depcheck": "node ./node_modules/depcheck/bin/depcheck.js"
   },
   "eslintConfig": {
     "extends": "react-app"
