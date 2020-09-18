@@ -5,7 +5,7 @@ import {
   CircularProgressbar,
 } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
-import ChangingProgressProvider from "./ChangingProgressProvider";
+import ChangingProgressProvider from "@/_components/ChangingProgressProvider";
 
 class HomePage extends React.Component {
   constructor(props) {
