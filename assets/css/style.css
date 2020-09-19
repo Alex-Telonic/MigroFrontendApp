@@ -1,3 +1,13 @@
+body { margin: 10; } /* Remove body margins */
+
+h1, input, p {
+    zoom: 2;
+}
+
+p {
+    text-align: center;
+}
+
 a {
     cursor: pointer;
 }
@@ -9,6 +19,7 @@ h1 {
 .sameRow {
     display: flex;
     flex-direction: row;
+    zoom: 2;
 }
 
 .sameRow div {
@@ -37,4 +48,16 @@ h1 {
 
 .jumbotron {
     margin-bottom: 0;
+    padding: 4 rem, 4 rem;
+}
+
+#progressBar {
+    width: 50%;
+    margin-top: 4rem;
+    margin-left: 25%;
+}
+
+#dashboard {
+    zoom: 2;
+
 }

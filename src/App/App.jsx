@@ -25,7 +25,7 @@ class App extends React.Component {
       <div>
         <Router history={history}>
         <div className="jumbotron">
-            <div className="container">
+            <div className="">
               <Switch>
                 <Route path="/signin" component={SigninPage} />
                 <Route path="/signup" component={SignupPage} />

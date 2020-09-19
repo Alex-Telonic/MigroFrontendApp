@@ -9,7 +9,7 @@ class ImgClick extends React.Component {
         return (
             <div>
                 <Link to="/nuts">
-                    <img src="/assets/img/1.png" height={50} />
+                    <img src="/assets/img/1.png" width={100} />
                 </Link>
             </div>
         );

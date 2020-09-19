@@ -41,7 +41,7 @@ class HomePage extends React.Component {
 
         const percentage = 70;
         const ProgressBar = () => (
-            <div>
+            <div id={"progressBar"}>
                 <CircularProgressbar
                     value={percentage}
                     text={`${percentage}%`}
@@ -50,25 +50,31 @@ class HomePage extends React.Component {
                         trailColor: "transparent"
                     })}
                 />
+                <p>of your current goals!</p>
             </div>
         );
 
         const Dashboard = () => (
             <div>
-                <List component="nav" aria-label="contacts">
+                <List component="nav" aria-label="contacts" id={"dashboard"}>
                     <ListItem button>
-                        <ListItemText primary="a"/>
+                        <ListItemText primary="new prod in discount!"/>
                     </ListItem>
                     <ListItem button>
-                        <ListItemText primary="b"/>
+                        <ListItemText primary="new local prod in market"/>
                     </ListItem>
+                    <div>
+                        <Fab variant="extended">
+                            Insights
+                        </Fab>
+                    </div>
                 </List>
             </div>
         );
 
         return (
             <div>
-                <h1>Home</h1>
+                <h1>Scan or search for item</h1>
                 <ScanBanner/>
                 <ProgressBar/>
                 <Dashboard/>
