@@ -8,10 +8,9 @@ import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a lo
 import { Carousel } from 'react-responsive-carousel';
 
 import {
-    CircularProgressbar,
+    CircularProgressbar, buildStyles,
 } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
-import ChangingProgressProvider from "@/_components/ChangingProgressProvider";
 
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -32,52 +31,48 @@ class HomePage extends React.Component {
 
     render() {
         const notify = () => toast("Wow so easy !");
+        const ScanBanner = () => (
+            <div className="sameRow">
+                <TextField id="standard-basic" label="Scan or search" fullWidth={true} size={"medium"}/>
+                <div>
+                    <img src="assets/1.png" height={50}/>
+                </div>
+            </div>
+        );
+
+        const percentage = 70;
+        const ProgressBar = () => (
+            <div>
+                <CircularProgressbar
+                    value={percentage}
+                    text={`${percentage}%`}
+                    styles={buildStyles({
+                        rotation: 1 / 2 + 1 / 8,
+                        trailColor: "transparent"
+                    })}
+                />
+            </div>
+        );
+
+        const Dashboard = () => (
+            <div>
+                <List component="nav" aria-label="contacts">
+                    <ListItem button>
+                        <ListItemText primary="a"/>
+                    </ListItem>
+                    <ListItem button>
+                        <ListItemText primary="b"/>
+                    </ListItem>
+                </List>
+            </div>
+        );
+
         return (
             <div>
                 <h1>Home</h1>
-                <TextField id="standard-basic" label="Scan or search" fullWidth={true} />
-                <div>
-                    discounts, news, overall metrics, goal accomplishments
-                </div>
-
-                <div>
-                    <List component="nav" aria-label="contacts">
-                        <ListItem button>
-                            <ListItemText primary="Chelsea Otakan"/>
-                        </ListItem>
-                        <ListItem button>
-                            <ListItemText primary="Eric Hoffman"/>
-                        </ListItem>
-                    </List>
-                </div>
-
-                <ChangingProgressProvider values={[0, 20, 40, 60, 80, 100]}>
-                    {percentage => (
-                        <CircularProgressbar value={percentage} text={`${percentage}%`}/>
-                    )}
-                </ChangingProgressProvider>
-                <div>
-                    <button onClick={notify}>Notify !</button>
-                    <ToastContainer />
-                </div>
-                <div>
-                    <Fab color="primary" aria-label="add">
-                        <AddIcon />
-                    </Fab>
-                    <Fab color="secondary" aria-label="edit">
-                        <EditIcon />
-                    </Fab>
-                    <Fab variant="extended">
-                        <NavigationIcon />
-                        Navigate
-                    </Fab>
-                    <Fab disabled aria-label="like">
-                        <FavoriteIcon />
-                    </Fab>
-                </div>
-                <div>
-                    <LinearProgressWithLabel value={60} />
-                </div>
+                <ScanBanner/>
+                <ProgressBar/>
+                <Dashboard/>
             </div>
         );
     }

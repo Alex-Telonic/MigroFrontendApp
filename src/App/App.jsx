@@ -29,11 +29,21 @@ class App extends React.Component {
                 <Route path="/signup" component={SignupPage} />
                   <PrivateRoute
                       path="/home"
-                      roles={[Role.User, Role.Admin]} // todo: has to be logged-in
+                      roles={[Role.User, Role.Admin]} // has to be logged-in
                       component={HomePage}
                   />
                   <PrivateRoute
                       path="/product"
+                      roles={[Role.User, Role.Admin]} // has to be logged-in
+                      component={ProductInfoPage}
+                  />
+                  <PrivateRoute
+                      path="/shopping"
+                      roles={[Role.User, Role.Admin]} // has to be logged-in
+                      component={HomePage}
+                  />
+                  <PrivateRoute
+                      path="/shoppingHistory"
                       roles={[Role.User, Role.Admin]} // has to be logged-in
                       component={ProductInfoPage}
                   />
