@@ -22,6 +22,7 @@ import EditIcon from '@material-ui/icons/Edit';
 import FavoriteIcon from '@material-ui/icons/Favorite';
 import NavigationIcon from '@material-ui/icons/Navigation';
 
+import LinearProgressWithLabel from '@/_components/LinearProgressWithLabel';
 
 class HomePage extends React.Component {
     constructor(props) {
@@ -82,6 +83,9 @@ class HomePage extends React.Component {
                     <Fab disabled aria-label="like">
                         <FavoriteIcon />
                     </Fab>
+                </div>
+                <div>
+                    <LinearProgressWithLabel value={60} />
                 </div>
             </div>
         );
