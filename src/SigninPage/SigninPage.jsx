@@ -17,6 +17,7 @@ class SigninPage extends React.Component {
     }
 
     render() {
+        // todo add slideshow
         const SigninForm = () => (
             <div>
                 <h2>Sign in</h2>

@@ -35,7 +35,11 @@ class HomePage extends React.Component {
         return (
             <div>
                 <h1>Home</h1>
-                <TextField id="standard-basic" label="Scan or search" />
+                <TextField id="standard-basic" label="Scan or search" fullWidth={true} />
+                <div>
+                    discounts, news, overall metrics, goal accomplishments
+                </div>
+
                 <div>
                     <List component="nav" aria-label="contacts">
                         <ListItem button>
@@ -46,20 +50,7 @@ class HomePage extends React.Component {
                         </ListItem>
                     </List>
                 </div>
-                <Carousel>
-                    <div>
-                        <img src="assets/1.png" />
-                        <p className="legend">Legend 1</p>
-                    </div>
-                    <div>
-                        <img src="assets/2.png" />
-                        <p className="legend">Legend 2</p>
-                    </div>
-                    <div>
-                        <img src="assets/3.png" />
-                        <p className="legend">Legend 3</p>
-                    </div>
-                </Carousel>
+
                 <ChangingProgressProvider values={[0, 20, 40, 60, 80, 100]}>
                     {percentage => (
                         <CircularProgressbar value={percentage} text={`${percentage}%`}/>
