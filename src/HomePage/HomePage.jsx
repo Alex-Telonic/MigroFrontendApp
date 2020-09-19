@@ -13,12 +13,17 @@ import {
 import "react-circular-progressbar/dist/styles.css";
 import ChangingProgressProvider from "@/_components/ChangingProgressProvider";
 
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 class HomePage extends React.Component {
     constructor(props) {
         super(props);
     }
 
     render() {
+        const notify = () => toast("Wow so easy !");
+
         return (
             <div>
                 <h1>Home</h1>
@@ -52,6 +57,10 @@ class HomePage extends React.Component {
                         <CircularProgressbar value={percentage} text={`${percentage}%`}/>
                     )}
                 </ChangingProgressProvider>
+                <div>
+                    <button onClick={notify}>Notify !</button>
+                    <ToastContainer />
+                </div>
             </div>
         );
     }
