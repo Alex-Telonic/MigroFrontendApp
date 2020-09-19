@@ -14,15 +14,15 @@ class ProductInfoPage extends React.Component {
                 <div>
                     <Carousel autoPlay>
                         <div>
-                            <img src="assets/1.png" />
+                            <img src="assets/img/1.png" />
                             <p className="legend">Legend 1</p>
                         </div>
                         <div>
-                            <img src="assets/2.png" />
+                            <img src="assets/img/2.png" />
                             <p className="legend">Legend 2</p>
                         </div>
                         <div>
-                            <img src="assets/3.png" />
+                            <img src="assets/img/3.png" />
                             <p className="legend">Legend 3</p>
                         </div>
                     </Carousel>

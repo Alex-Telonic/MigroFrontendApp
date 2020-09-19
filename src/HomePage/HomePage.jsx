@@ -23,6 +23,7 @@ import NavigationIcon from '@material-ui/icons/Navigation';
 
 import LinearProgressWithLabel from '@/_components/LinearProgressWithLabel';
 import { userModel, userService } from '@/_services';
+import {ImgClick} from "@/_components/ImgClick";
 
 class HomePage extends React.Component {
     constructor(props) {
@@ -34,9 +35,7 @@ class HomePage extends React.Component {
         const ScanBanner = () => (
             <div className="sameRow">
                 <TextField id="standard-basic" label="Scan or search" fullWidth={true} size={"medium"}/>
-                <div>
-                    <img src="assets/1.png" height={50}/>
-                </div>
+                <ImgClick/>
             </div>
         );
 

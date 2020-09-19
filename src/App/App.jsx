@@ -12,6 +12,8 @@ import { HomePage } from '@/HomePage';
 import {ProductInfoPage} from "@/ProductInfoPage";
 import {SigninPage} from "@/SigninPage";
 import {SignupPage} from "@/SignupPage";
+import {NutsPage} from "@/_fake/NutsPage";
+import {RedBullPage} from "@/_fake/RedBullPage";
 
 class App extends React.Component {
   constructor(props) {
@@ -46,6 +48,14 @@ class App extends React.Component {
                       path="/shoppingHistory"
                       roles={[Role.User, Role.Admin]} // has to be logged-in
                       component={ProductInfoPage}
+                  />
+                  <PrivateRoute
+                      path="/nuts"
+                      component={NutsPage}
+                  />
+                  <PrivateRoute
+                      path="/redbull"
+                      component={RedBullPage}
                   />
               </Switch>
             </div>
