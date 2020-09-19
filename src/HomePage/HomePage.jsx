@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'react-router-dom/es/Link';
+import { Link } from "react-router-dom";
 
 import { ListItem, ListItemIcon, ListItemText, List } from '@material-ui/core';
 import TextField from '@material-ui/core/TextField';
@@ -23,6 +23,7 @@ import FavoriteIcon from '@material-ui/icons/Favorite';
 import NavigationIcon from '@material-ui/icons/Navigation';
 
 import LinearProgressWithLabel from '@/_components/LinearProgressWithLabel';
+import { userModel, userService } from '@/_services';
 
 class HomePage extends React.Component {
     constructor(props) {
@@ -31,7 +32,6 @@ class HomePage extends React.Component {
 
     render() {
         const notify = () => toast("Wow so easy !");
-
         return (
             <div>
                 <h1>Home</h1>

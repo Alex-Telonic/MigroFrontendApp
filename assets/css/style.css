@@ -1,0 +1,37 @@
+a {
+    cursor: pointer;
+}
+
+.sameRow {
+    display: flex;
+    flex-direction: row;
+}
+
+.sameRow div {
+    margin-left: 2%;
+    margin-right: 2%;
+}
+
+.footerContainer {
+    text-align: center;
+}
+
+.largeCheckbox {
+    margin-left: 2%;
+    margin-right: 2%;
+}
+
+.bg-banner {
+    background-image:
+            url("banner.png");
+    background-size: 100%;
+}
+
+.nav-highlight {
+    font-weight: bolder;
+    color: rgba(255,255,255, 0.9) !important;
+}
+
+.jumbotron {
+    margin-bottom: 0;
+}

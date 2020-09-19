@@ -6,8 +6,12 @@ import { connect } from 'react-redux';
 
 import { history, Role } from '@/_helpers';
 import { userModel, userService } from '@/_services';
+import { PrivateRoute } from '@/_components';
 
 import { HomePage } from '@/HomePage';
+import {ProductInfoPage} from "@/ProductInfoPage";
+import {SigninPage} from "@/SigninPage";
+import {SignupPage} from "@/SignupPage";
 
 class App extends React.Component {
   constructor(props) {
@@ -21,7 +25,18 @@ class App extends React.Component {
         <div className="jumbotron">
             <div className="container">
               <Switch>
-                <Route path="/" component={HomePage} />
+                <Route path="/signin" component={SigninPage} />
+                <Route path="/signup" component={SignupPage} />
+                  <PrivateRoute
+                      path="/home"
+                      roles={[Role.User, Role.Admin]} // todo: has to be logged-in
+                      component={HomePage}
+                  />
+                  <PrivateRoute
+                      path="/product"
+                      roles={[Role.User, Role.Admin]} // has to be logged-in
+                      component={ProductInfoPage}
+                  />
               </Switch>
             </div>
         </div>
