@@ -50,24 +50,26 @@ class HomePage extends React.Component {
                         trailColor: "transparent"
                     })}
                 />
-                <p>of your current goals!</p>
+                <p>of your monthly goals!</p>
             </div>
         );
 
         const Dashboard = () => (
             <div>
                 <List component="nav" aria-label="contacts" id={"dashboard"}>
-                    <ListItem button>
-                        <ListItemText primary="new prod in discount!"/>
+                    <ListItem button >
+                        <img src="/assets/img/biotta.png" height={100} />
+                        <p>new product in discount!</p>
                     </ListItem>
                     <ListItem button>
-                        <ListItemText primary="new local prod in market"/>
+                        <img src="/assets/img/cheese.png" height={100} />
+                        <p>just fresh in your Migros-Supermarkt - Hauptbahnhof !</p>
                     </ListItem>
-                    <div>
-                        <Fab variant="extended">
-                            Insights
+                    <ListItem button>
+                        <Fab variant="extended" id={"fab"}>
+                            Insights: see how you compare with others
                         </Fab>
-                    </div>
+                    </ListItem>
                 </List>
             </div>
         );

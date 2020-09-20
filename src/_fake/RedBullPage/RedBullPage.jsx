@@ -5,7 +5,7 @@ import ReactPlayer from "react-player";
 class RedBullPage extends React.Component {
     render() {
         return (
-            <ReactPlayer url="/assets/video/redbull.mp4" width="100%" height="100%" controls={false} playing={true} />
+            <ReactPlayer url="/assets/video/redbull.mp4" width="95%" height="95%" controls={false} playing={true} />
         );
     }
 }

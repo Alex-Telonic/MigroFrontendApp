@@ -1,3 +1,16 @@
+html,
+body, #app, .jumbotron {
+    height: 100%;
+}
+
+#app {
+    margin-bottom: 10em;
+}
+
+#fab {
+    width: 95%;
+}
+
 body { margin: 10; } /* Remove body margins */
 
 h1, input, p {

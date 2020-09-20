@@ -8,8 +8,8 @@ class ImgClick extends React.Component {
     render () {
         return (
             <div>
-                <Link to="/nuts">
-                    <img src="/assets/img/1.png" width={100} />
+                <Link to="/redbull">
+                    <img src="/assets/img/camera.png" width={100} />
                 </Link>
             </div>
         );

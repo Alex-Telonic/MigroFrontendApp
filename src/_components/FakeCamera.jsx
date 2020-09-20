@@ -9,7 +9,7 @@ class FakeCamera extends React.Component {
 
     render () {
         return (
-            <ReactPlayer url={this.props.videoUrl} width="100%" height="100%" controls={false} playing={true} />
+            <ReactPlayer url={this.props.videoUrl} width="95%" height="95%" controls={false} playing={true} />
         )
     };
 }
