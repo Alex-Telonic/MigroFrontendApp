@@ -11,9 +11,13 @@ body, #app, .jumbotron {
     width: 95%;
 }
 
+#loginsImg {
+    padding-left: 3%;
+}
+
 body { margin: 10; } /* Remove body margins */
 
-h1, input, p {
+h1, input, p, h3, .form-group {
     zoom: 2;
 }
 

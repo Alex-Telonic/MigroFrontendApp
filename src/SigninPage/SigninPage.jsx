@@ -118,6 +118,7 @@ class SigninPage extends React.Component {
                 <SigninForm />
                 <RegisterOption />
                 <ForgotPasswordOption />
+                <img src="/assets/img/logins.png" width={100} />
             </div>
         );
     }

@@ -15,19 +15,20 @@ class SignupPage extends React.Component {
                 <div>
                     <Carousel autoPlay>
                         <div>
-                            <img src="assets/img/1.png" />
-                            <p className="legend">Legend 1</p>
+                            <img src="assets/img/traffic.jpg" height={600}/>
+                            <p className="legend">+ 3.1 tons per person</p>
                         </div>
                         <div>
-                            <img src="assets/img/2.png" />
-                            <p className="legend">Legend 2</p>
+                            <img src="assets/img/crops.png" height={600}/>
+                            <p className="legend">+ 6.7 tons per person</p>
                         </div>
                         <div>
-                            <img src="assets/img/3.png" />
-                            <p className="legend">Legend 3</p>
+                            <img src="assets/img/ice.jpg" height={600}/>
+                            <p className="legend">- 100 m² per person</p>
                         </div>
                     </Carousel>
                 </div>
+                <h3>Together we save 1 skiing track a day!</h3>
                 <Formik
                     initialValues={{
                         username: '',
@@ -80,10 +81,10 @@ class SignupPage extends React.Component {
                         </Form>
                     )}
                 />
+                <img src="/assets/img/logins.png" id={"loginsImg"} height={300}/>
             </div>
         );
     }
 }
 
-// todo add Facebook, google, apple icons
 export {SignupPage};
